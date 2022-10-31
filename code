@@ -26,6 +26,80 @@ void main()
  cout<<“Coloumn:”;
  cin>>j;
 
+//if position is wrong
+ for(;i>3||i<1||j>3||j<1||(‘x’==mat[i-1][j-1]||’o’==mat[i-1][j-1]);)
+ {
+    cout<<“nSorry!!!! wrong position,Choose the position again”;
+    cout<<“nRow:”;
+    cin>>i;
+    cout<<“Coloumn:”;
+    cin>>j;
+ }
+ mat[i-1][j-1]=’x’;
+ sum++;
+ //to check if player 1 wins or not
+ if(mat[0][0]==’x’&&mat[0][0]==mat[0][1]&&mat[0][0]==mat[0][2])
+ {
+  table();
+  cout<<“nPlayer 1 wins…….!!!” ;
+  cout<<“nYou have played Great…..!!!”;
+  sleep(5);
+  break;
+ }
+
+ if(mat[1][0]==’x’&&mat[1][0]==mat[1][1]&&mat[1][0]==mat[1][2])
+ {
+  table();
+  cout<<“nPlayer 1 wins…….!!!”;
+  cout<<“nYou have played Great…..!!!”;
+  sleep(5);
+  break;
+ }
+
+ if(mat[2][0]==’x’&&mat[2][0]==mat[2][1]&&mat[2][0]==mat[2][2])
+ {
+  table();
+  cout<<“nPlayer 1 wins…….!!!”;
+  cout<<“nYou have played Great…..!!!”;
+  sleep(5);
+  break;
+ }
+
+ if(mat[0][0]==’x’&&mat[0][0]==mat[1][0]&&mat[0][0]==mat[2][0])
+ {
+  table();
+  cout<<“nPlayer 1 wins…….!!!”;
+  cout<<“nYou have played Great…..!!!”;
+  sleep(5);
+  break;
+ }
+
+ if(mat[0][1]==’x’&&mat[0][1]==mat[1][1]&&mat[0][1]==mat[2][1])
+ {
+  table();
+  cout<<“nPlayer 1 wins…….!!!”;
+  cout<<“nYou have played Great…..!!!”;
+  sleep(5);
+  break;
+ }
+
+ if(mat[0][2]==’x’&&mat[0][2]==mat[1][2]&&mat[0][2]==mat[2][2])
+ {
+  table();
+  cout<<“nPlayer 1 wins…….!!!”;
+  cout<<“nYou have played Great…..!!!”;
+  sleep(5);
+  break;
+ }
+
+ if(mat[0][0]==’x’&&mat[0][0]==mat[1][1]&&mat[0][0]==mat[2][2])
+ {
+  table();
+  cout<<“nPlayer 1 wins…….!!!”;
+  cout<<“nYou have played Great…..!!!”;
+  sleep(5);
+  break;
+ }
 
  if(mat[0][2]==’x’&&mat[0][2]==mat[1][1]&&mat[0][0]==mat[2][0])
  {
